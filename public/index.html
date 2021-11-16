@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="./images/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="Movie Maza"
+      content="This is the movie app where you can search any movie and find the movie details, you can also have detail description of movie and celebrity details "
+    />
+    <link rel="apple-touch-icon" href="./images/logo.png" />
+    <link rel="manifest" href="./manifest.json" />
+    <title>Movie Maza</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("./service-worker.js")
+            .then((reg) => console.log("Success: ", reg.scope))
+            .catch((err) => console.log("Failure: ", err));
+        });
+      }
+    </script>
+  </body>
+</html>

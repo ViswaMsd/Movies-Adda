@@ -1,0 +1,32 @@
+.selection_category {
+  padding: 5px 10%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  @include mQ(640px) {
+    padding: 5px 2px;
+    justify-content: center;
+  }
+  select {
+    padding: 5px 0px;
+    font-size: 1.5vw;
+    border: none;
+    font-weight: bold;
+    background-color: #39445a;
+    color: #fff;
+    margin-bottom: 10px;
+    @include mQ(640px) {
+      font-size: 5vw;
+    }
+    option {
+      padding: 10px 0px;
+      font-size: 1.5vw;
+      border: none;
+      font-weight: bold;
+      @include mQ(640px) {
+        font-size: 4vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@import "../../css/mixins";
+.trending_page {
+  width: 100%;
+  // height: 80vh;
+  // overflow-y: auto;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    // height: 10vh;
+    @include mQ(640px) {
+      padding: 10px 5px;
+    }
+    h1 {
+      padding: 0%;
+      margin: 0%;
+      font-size: $heading;
+      @include mQ(640px) {
+        font-size: $resp_heading;
+      }
+    }
+    select {
+      padding: 5px 0px;
+      font-size: 1.5vw;
+      border: none;
+      font-weight: bold;
+      background-color: #39445a;
+      color: #fff;
+      @include mQ(640px) {
+        font-size: 5vw;
+      }
+      option {
+        padding: 10px 0px;
+        font-size: 1.5vw;
+        border: none;
+        font-weight: bold;
+        @include mQ(640px) {
+          font-size: 4vw;
+        }
+      }
+    }
+  }
+  .main {
+    width: 100%;
+    // height: 70vh;
+    // overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0px;
+    .data_container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin-right: 10px;
+      cursor: pointer;
+      margin-bottom: 10px;
+      .rating {
+        position: absolute;
+        right: -5px;
+        top: -5px;
+        border-radius: 8px;
+        padding: 0px 5px;
+      }
+      img {
+        height: 250px;
+        border-radius: 5px;
+      }
+      p {
+        width: 180px;
+        font-size: 1vw;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+        @include mQ(640px) {
+          font-size: 4vw;
+        }
+      }
+    }
+  }
+}
